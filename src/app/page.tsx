@@ -8,7 +8,7 @@ export default function Home() {
 
   return (
     <div>
-      <main className="flex flex-col items-center justify-center gap-5 min-h-screen">
+      <main className="flex flex-col items-center justify-center gap-5 my-10 border rounded-xl mx-5 p-5">
         <div>
         <h1>Home Page</h1>
         <button className="border p-2 rounded-xl cursor-pointer"
@@ -44,7 +44,7 @@ export default function Home() {
           
         </div>
       </main>
-      <UserProfile />
+      <UserProfile/>
     </div>
   );
 }
