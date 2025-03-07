@@ -1,4 +1,5 @@
 'use client'
+import { UserList } from "@/components/UserList";
 import UserProfile from "@/components/UserProfile";
 import React from "react";
 
@@ -44,7 +45,8 @@ export default function Home() {
           
         </div>
       </main>
-      <UserProfile/>
+      <UserProfile />
+      <UserList />
     </div>
   );
 }
