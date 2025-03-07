@@ -1,4 +1,5 @@
 import '@testing-library/jest-dom' ;
+import 'whatwg-fetch'
 import { server } from './mocks/server';
 
 //Before every unit test gets fired, this method will run first
