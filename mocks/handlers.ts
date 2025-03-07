@@ -3,9 +3,8 @@
 import {http, HttpResponse} from 'msw'
 
 export const handlers = [
-    http.get('/api/users' , () => {
-        return HttpResponse.json(
-         {id:1 , username : 'Nimooli'}
-        )
-    })
+    http.get('/api/users', async () => {
+       return HttpResponse.json([{id : 2 , username : 'dambooli kosak'}])
+       
+      })
 ]
