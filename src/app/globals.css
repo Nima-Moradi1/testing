@@ -6,3 +6,11 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
+
+button {
+  @apply rounded-md bg-gradient-to-r from-slate-50 via-slate-100 to-slate-200 px-6 py-2 font-semibold text-black hover:opacity-50 disabled:from-gray-400 disabled:to-gray-400 disabled:text-black disabled:opacity-50;
+}
+
+input {
+  @apply rounded-xl border-2 border-slate-300 px-2 py-1 text-black outline-none focus:shadow-black/50 focus:shadow-md;
+}

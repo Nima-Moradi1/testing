@@ -14,6 +14,7 @@ export const UserList = () => {
 
     return (
         <div className="flex flex-col items-center justify-center gap-3 border p-3 m-4 rounded-xl">
+            <h1 className='font-extrabold text-xl mb-4'>Unit Testing Part 3</h1>
             {users?.length > 0 ? users.map((user : {id:number , username : string}) => {
                 return (
                     <div key={user?.id}>

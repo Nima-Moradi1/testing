@@ -19,6 +19,7 @@ const UserProfile = ({
 
   return (
     <div className='flex flex-col items-center justify-center border p-3 rounded-xl mx-5'>
+      <h1 className='font-extrabold text-xl mb-4'>Unit Testing Part 2</h1>
     <div>UserProfile</div>
     <div>Name : { displayName && displayName?.length > 30 ? displayName?.slice(0,25).concat('...') : displayName}</div>
     <div>Username : {username}</div>
