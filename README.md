@@ -1,36 +1,125 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Testing App
 
-## Getting Started
+This is a **Next.js** testing application that implements **Jest**, **React Testing Library**, and **Playwright** for comprehensive testing. The project is structured to support both unit and end-to-end testing.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 📂 Folder Structure
+
+```
+__tests__/
+│── e2e/               # End-to-end tests with Playwright
+│   ├── example.spec.ts
+│   ├── HomePage.test.tsx
+│   ├── index.test.tsx
+│   ├── LoginForm.test.tsx
+│   ├── UserList.test.tsx
+│   ├── UserProfile.test.tsx
+│
+.github/               # GitHub-related configurations
+.next/                 # Next.js build output (generated after build)
+.swc/                  # Next.js SWC (Speedy Web Compiler) cache
+mocks/                 # Mock data for testing
+node_modules/          # Installed dependencies
+playwright-report/     # Reports for Playwright tests
+public/                # Static assets
+src/                   # Main application source code
+│── app/               # Next.js pages and components
+│── components/        # Reusable UI components
+│   ├── Form.tsx
+│   ├── LoginForm.tsx
+│   ├── UserList.tsx
+│   ├── UserProfile.tsx
+│
+test-results/          # Stores test results
+
+.eslintrc.json         # ESLint configuration
+.gitignore             # Git ignore file
+eslint.config.mjs      # Extended ESLint configuration
+jest.config.ts         # Jest configuration
+jest.setup.ts          # Jest setup file
+next-env.d.ts          # TypeScript definitions for Next.js
+next.config.js         # Next.js configuration
+package.json           # Project dependencies and scripts
+package-lock.json      # Dependency lock file
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛠️ Technologies Used
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Next.js 15** - The core framework
+- **React 19** - UI components
+- **Jest** - Unit and integration testing
+- **React Testing Library** - Testing utilities for React components
+- **Playwright** - End-to-end testing
+- **ESLint** - Linting support
+- **TypeScript** - Type safety
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🔧 Installation & Setup
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/your-repo/testing-app.git
+   cd testing-app
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-## Deploy on Vercel
+3. **Start the development server:**
+   ```bash
+   npm run dev
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+4. **Build for production:**
+   ```bash
+   npm run build
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+5. **Start the production server:**
+   ```bash
+   npm run start
+   ```
+
+---
+
+## 🧪 Running Tests
+
+### ✅ Unit & Integration Tests (Jest + React Testing Library)
+
+Run all Jest tests:
+```bash
+npm test
+```
+
+Run Jest in watch mode:
+```bash
+npm run test:watch
+```
+
+### 🌐 End-to-End Tests (Playwright)
+
+Run Playwright tests:
+```bash
+npx playwright test
+```
+
+Generate Playwright test report:
+```bash
+npx playwright show-report
+```
+
+---
+
+## 📝 Notes
+
+- All test files are documented with comments to explain their purpose and usage.
+- Playwright test results are stored in the `playwright-report/` directory.
+- Mocking is implemented using `msw` (Mock Service Worker) for API request testing.
+
+---
