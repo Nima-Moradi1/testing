@@ -6,5 +6,9 @@ export const handlers = [
     http.get('/api/users', async () => {
        return HttpResponse.json([{id : 2 , username : 'dambooli kosak'}])
        
-      })
+      }) ,
+    http.post('/api/auth', async () => {
+        return HttpResponse.json({ status: 200 })
+        
+       })
 ]
